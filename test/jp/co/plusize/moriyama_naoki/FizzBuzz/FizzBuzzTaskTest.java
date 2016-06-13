@@ -26,43 +26,51 @@ public class FizzBuzzTaskTest {
 	public void tearDown() throws Exception {
 	}
 	
+	//3の倍数
 	@Test
-	public void 仕様通りに始まるか() throws Exception {
-		assertEquals("", FizzBuzzTask.FizzBuzz(0));
+	public void 境界値分析で3の倍数の前でFizzが出力されないか() throws Exception {
+		assertNotSame("Fizz", FizzBuzzTask.FizzBuzz(2));
 	}
 	
 	@Test
-	public void 仕様通りに始まっているか() throws Exception {
-		assertEquals("1", FizzBuzzTask.FizzBuzz(1));
+	public void 境界値分析で3の倍数のためFizzが出力されるか() throws Exception {
+		assertSame("Fizz", FizzBuzzTask.FizzBuzz(3));
 	}
 	
 	@Test
-	public void 仕様通りに終わるか() throws Exception {
-		assertEquals("Buzz", FizzBuzzTask.FizzBuzz(100));
+	public void 境界値分析で3の倍数の後でFizzが出力されないか() throws Exception {
+		assertNotSame("Fizz", FizzBuzzTask.FizzBuzz(4));
+	}
+	
+	//5の倍数
+	@Test
+	public void 境界値分析で5の倍数の前でBuzzが出力されないか() throws Exception {
+		assertNotSame("Buzz", FizzBuzzTask.FizzBuzz(4));
 	}
 	
 	@Test
-	public void 仕様通りに終わっているか() throws Exception {
-		assertEquals("", FizzBuzzTask.FizzBuzz(101));
+	public void 境界値分析で5の倍数のためBuzzが出力されるか() throws Exception {
+		assertSame("Buzz", FizzBuzzTask.FizzBuzz(5));
 	}
 	
 	@Test
-	public void 数が出力されるか() throws Exception {
-		assertEquals("2", FizzBuzzTask.FizzBuzz(2));
+	public void 境界値分析で5の倍数の後でBuzzが出力されないか() throws Exception {
+		assertNotSame("Buzz", FizzBuzzTask.FizzBuzz(6));
+	}
+	
+	//3,5の倍数
+	@Test
+	public void 境界値分析で3と5の倍数の前でFizzBuzzが出力されないか() throws Exception {
+		assertNotSame("FizzBuzz", FizzBuzzTask.FizzBuzz(14));
 	}
 	
 	@Test
-	public void Fizzが出力されるか() throws Exception {
-		assertEquals("Fizz", FizzBuzzTask.FizzBuzz(33));
+	public void 境界値分析で3と5の倍数のためFizzBuzzが出力されるか() throws Exception {
+		assertSame("FizzBuzz", FizzBuzzTask.FizzBuzz(15));
 	}
 	
 	@Test
-	public void Buzzが出力されるか() throws Exception {
-		assertEquals("Buzz", FizzBuzzTask.FizzBuzz(55));
-	}
-	
-	@Test
-	public void FizzBuzzが出力されるか() throws Exception {
-		assertEquals("FizzBuzz", FizzBuzzTask.FizzBuzz(75));
+	public void 境界値分析で3と5の倍数の後でFizzBuzzが出力されないか() throws Exception {
+		assertNotSame("FizzBuzz", FizzBuzzTask.FizzBuzz(16));
 	}
 }
