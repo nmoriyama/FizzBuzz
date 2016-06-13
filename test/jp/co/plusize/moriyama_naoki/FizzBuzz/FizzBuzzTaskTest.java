@@ -45,4 +45,24 @@ public class FizzBuzzTaskTest {
 	public void 仕様通りに終わっているか() throws Exception {
 		assertEquals("", FizzBuzzTask.FizzBuzz(101));
 	}
+	
+	@Test
+	public void 数が出力されるか() throws Exception {
+		assertEquals("2", FizzBuzzTask.FizzBuzz(2));
+	}
+	
+	@Test
+	public void Fizzが出力されるか() throws Exception {
+		assertEquals("Fizz", FizzBuzzTask.FizzBuzz(33));
+	}
+	
+	@Test
+	public void Buzzが出力されるか() throws Exception {
+		assertEquals("Buzz", FizzBuzzTask.FizzBuzz(55));
+	}
+	
+	@Test
+	public void FizzBuzzが出力されるか() throws Exception {
+		assertEquals("FizzBuzz", FizzBuzzTask.FizzBuzz(75));
+	}
 }
