@@ -26,9 +26,8 @@ public class FizzBuzzTaskTest {
 	public void tearDown() throws Exception {
 	}
 	
-	//3の倍数
 	@Test
-	public void 倍数が3の前の出力は正しいか() throws Exception {
+	public void Fizzが出力される前の値は正しいか() throws Exception {
 		assertEquals("2", FizzBuzzTask.FizzBuzz(2));
 	}
 	
@@ -38,24 +37,22 @@ public class FizzBuzzTaskTest {
 	}
 	
 	@Test
-	public void 倍数が3の後及び5の前の出力は正しいか() throws Exception {
+	public void Fizzが出力された後とBuzzが出力される前の値は正しいか() throws Exception {
 		assertEquals("4", FizzBuzzTask.FizzBuzz(4));
 	}
 	
-	//5の倍数
 	@Test
 	public void 倍数が5のためBuzzが出力されるか() throws Exception {
 		assertEquals("Buzz", FizzBuzzTask.FizzBuzz(5));
 	}
 	
 	@Test
-	public void 倍数が5の後の出力は正しいか() throws Exception {
+	public void Buzzが出力された後の値は正しいか() throws Exception {
 		assertEquals("Fizz", FizzBuzzTask.FizzBuzz(6));
 	}
-	
-	//3と5の倍数
+
 	@Test
-	public void 倍数が3と5の前の出力は正しいか() throws Exception {
+	public void FizzBuzzが出力される前の値は正しいか() throws Exception {
 		assertEquals("14", FizzBuzzTask.FizzBuzz(14));
 	}
 	
@@ -65,7 +62,7 @@ public class FizzBuzzTaskTest {
 	}
 	
 	@Test
-	public void 倍数が3と5の後の出力は正しいか() throws Exception {
+	public void FizzBuzzが出力された後の値は正しいか() throws Exception {
 		assertEquals("16", FizzBuzzTask.FizzBuzz(16));
 	}
 }
