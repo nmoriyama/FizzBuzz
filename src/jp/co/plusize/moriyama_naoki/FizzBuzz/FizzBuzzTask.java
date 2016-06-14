@@ -12,14 +12,11 @@ public class FizzBuzzTask {
 		String str = new String();
 		if (i % 3 == 0 && i % 5 == 0) {
 			str = "FizzBuzz";
-		} 
-		if (i % 3 == 0 && i % 5 != 0) {
+		} else if (i % 3 == 0) {
 			str = "Fizz";
-		}
-		if (i % 3 != 0 && i % 5 == 0) {
+		} else if (i % 5 == 0) {
 			str = "Buzz";
-		} 
-		if (i % 3 != 0 && i % 5 != 0) {
+		} else {
 			str = String.valueOf(i);
 		}
 		return str;

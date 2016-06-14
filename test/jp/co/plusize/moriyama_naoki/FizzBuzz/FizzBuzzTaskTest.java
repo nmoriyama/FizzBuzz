@@ -28,49 +28,44 @@ public class FizzBuzzTaskTest {
 	
 	//3の倍数
 	@Test
-	public void 境界値分析で3の倍数の前でFizzが出力されないか() throws Exception {
-		assertNotSame("Fizz", FizzBuzzTask.FizzBuzz(2));
+	public void 倍数が3の前の出力は正しいか() throws Exception {
+		assertEquals("2", FizzBuzzTask.FizzBuzz(2));
 	}
 	
 	@Test
-	public void 境界値分析で3の倍数のためFizzが出力されるか() throws Exception {
-		assertSame("Fizz", FizzBuzzTask.FizzBuzz(3));
+	public void 倍数が3のためFizzが出力されるか() throws Exception {
+		assertEquals("Fizz", FizzBuzzTask.FizzBuzz(3));
 	}
 	
 	@Test
-	public void 境界値分析で3の倍数の後でFizzが出力されないか() throws Exception {
-		assertNotSame("Fizz", FizzBuzzTask.FizzBuzz(4));
+	public void 倍数が3の後及び5の前の出力は正しいか() throws Exception {
+		assertEquals("4", FizzBuzzTask.FizzBuzz(4));
 	}
 	
 	//5の倍数
 	@Test
-	public void 境界値分析で5の倍数の前でBuzzが出力されないか() throws Exception {
-		assertNotSame("Buzz", FizzBuzzTask.FizzBuzz(4));
+	public void 倍数が5のためBuzzが出力されるか() throws Exception {
+		assertEquals("Buzz", FizzBuzzTask.FizzBuzz(5));
 	}
 	
 	@Test
-	public void 境界値分析で5の倍数のためBuzzが出力されるか() throws Exception {
-		assertSame("Buzz", FizzBuzzTask.FizzBuzz(5));
+	public void 倍数が5の後の出力は正しいか() throws Exception {
+		assertEquals("Fizz", FizzBuzzTask.FizzBuzz(6));
+	}
+	
+	//3と5の倍数
+	@Test
+	public void 倍数が3と5の前の出力は正しいか() throws Exception {
+		assertEquals("14", FizzBuzzTask.FizzBuzz(14));
 	}
 	
 	@Test
-	public void 境界値分析で5の倍数の後でBuzzが出力されないか() throws Exception {
-		assertNotSame("Buzz", FizzBuzzTask.FizzBuzz(6));
-	}
-	
-	//3,5の倍数
-	@Test
-	public void 境界値分析で3と5の倍数の前でFizzBuzzが出力されないか() throws Exception {
-		assertNotSame("FizzBuzz", FizzBuzzTask.FizzBuzz(14));
+	public void 倍数が3と5のためFizzBuzzが出力されるか() throws Exception {
+		assertEquals("FizzBuzz", FizzBuzzTask.FizzBuzz(15));
 	}
 	
 	@Test
-	public void 境界値分析で3と5の倍数のためFizzBuzzが出力されるか() throws Exception {
-		assertSame("FizzBuzz", FizzBuzzTask.FizzBuzz(15));
-	}
-	
-	@Test
-	public void 境界値分析で3と5の倍数の後でFizzBuzzが出力されないか() throws Exception {
-		assertNotSame("FizzBuzz", FizzBuzzTask.FizzBuzz(16));
+	public void 倍数が3と5の後の出力は正しいか() throws Exception {
+		assertEquals("16", FizzBuzzTask.FizzBuzz(16));
 	}
 }
